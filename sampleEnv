@@ -1,0 +1,4 @@
+NODE_ENV=development
+PORT=8000
+MONGO_URI=mongodb://localhost:27017/mernauth
+JWT_SECRET=hucube873hnfciu38wyhfcd
