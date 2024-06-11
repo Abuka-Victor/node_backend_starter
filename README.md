@@ -67,14 +67,17 @@ yarn test
 
 #### Auth
 
-- POST /api/auth/signup - User signup
-- POST /api/auth/login - User login
+- POST /api/users/ - User signup
+- POST /api/users/auth - User login
+- POST /api/users/logout - User logout
 
 #### Protected Routes
 
 These routes require a valid JWT token.
 
-- GET /api/protected - Example protected route
+- GET /api/users/profile - Get User profile
+- PUT /api/users/profile - Update User profile
+- DELETE /api/users/profile - Delete User profile
 
 ### Project Structure
 
@@ -82,20 +85,20 @@ These routes require a valid JWT token.
 Copy code
 .
 │── config
-│  └── db.js
+│   └── db.js
 │── controllers
-│  └── userController.js
+│   └── userController.js
 │── middlewares
-│  └── authMiddleware.js
-│  └── errorMiddleware.js
+│   └── authMiddleware.js
+│   └── errorMiddleware.js
 │── models
-│  └── userModel.js
+│   └── userModel.js
 │── routes
-│  └── userRoutes.js
+│   └── userRoutes.js
 │── __tests__
-│  └── user.test.js
+│   └── user.test.js
 │── utils
-│  └── generateToken.js
+│   └── generateToken.js
 │── server.js
 ├── .env
 ├── .env.test
